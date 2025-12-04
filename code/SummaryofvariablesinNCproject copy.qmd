@@ -1,0 +1,136 @@
+---
+title: "SummaryofVariablesinNCproject23102025"
+author: "Shivalika"
+format: html
+editor: visual
+---
+
+```{r}
+library(readxl)
+library(broom) 
+library(dplyr) 
+library(ggplot2)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(webshot2)
+ library(officer)
+library(flextable)
+library(tidyr)
+
+my_data <- read_excel("/Users/shivalikasingh/Desktop/Manuscript/R data/Input/NCDataFile.xlsx",sheet ="R_data" )
+```
+
+```{r}
+colSums(is.na(my_data))# this tell me missing values in each column
+####preparing summary of the variables by landuse
+
+#table(my_data$Land_use)
+#table(my_data$MLRA)
+# Summary by land use
+variable_order <- c("STBAi"
+                    ,"STBAc",
+                   "BSRi","BSRc",
+                   "CMINi","CMINc",
+                   "ProtC3d","ProtC24d",
+                  "Net_NMIN24_intact","Net_NMIN24_crushed",
+                   "ProtN24d"
+                   )
+
+summary_long_by_landuse <- my_data |>
+  pivot_longer(cols = all_of(variable_order), 
+  names_to = "variable", values_to = "value") |>
+  group_by(Land_use, variable) |>
+  summarise(n=sum(!is.na(value)),
+            mean = round(mean(value, na.rm = TRUE), 0),
+  #median=median(value,na.rm = TRUE),
+  #IQR = IQR(value, na.rm = TRUE),
+  SD= round(sd(value, na.rm = TRUE),0),
+  P5 = round(quantile(value, probs = 0.05, na.rm = TRUE),0),
+  P95 = round(quantile(value, probs = 0.95, na.rm = TRUE),0)
+  #Range = P95 - P5
+  ) |>
+  mutate(variable=factor(variable, levels=variable_order),
+         variable = recode(variable,
+      "STBAi" = "STBA intact",
+      "STBAc" = "STBA crushed",
+      "BSRi"  = "BSR intact",
+      "BSRc"  = "BSR crushed",
+      "CMINi" = "CMIN intact",
+      "CMINc" = "CMIN crushed",
+      "ProtC3d" = " Protected carbon (0-3 days)",
+      "ProtC24d" = "Protected carbon C (24 days)",
+      "Net_NMIN24_intact" = "Net N mineralization intact",
+      "Net_NMIN24_crushed" = "Net N mineralization crushed",
+      "ProtN24d" = "Protected nitrogen  (24 days)"),
+         Land_use=recode(Land_use,
+                         "1CT"="Conventional tillage",
+                         "2NT"="No-till",
+                         "3GR"="Grassland",
+                         "4WL"="Woodland")
+)|>
+  arrange(variable)
+  summary_long_by_landuse
+ 
+ tbl<- kbl(summary_long_by_landuse , caption = "Table 1:summary of response variables by landuse", 
+  digits=2) |>
+  kable_classic(full_width = F, html_font = "Cambria")
+ 
+ 
+ tbl <- flextable(summary_long_by_landuse)
+save_as_docx(tbl, path = "Table1_summary.docx")
+
+```
+
+```{r}
+# summary of sand for full data set
+  summary_long <- my_data |>
+  pivot_longer(cols = c(Sand), 
+  names_to = "variable", values_to = "value") |>
+  group_by(variable) |>
+  summarise(n=sum(!is.na(value)),mean=mean(value, na.rm = TRUE),
+  median=median(value,na.rm =   TRUE),
+  IQR = IQR(value, na.rm = TRUE),
+  sd= sd(value, na.rm = TRUE),
+  P5 = quantile(value, probs = 0.05, na.rm = TRUE),
+  P95 = quantile(value, probs = 0.95, na.rm = TRUE),
+  Range = P95 - P5)
+  summary_long
+
+ #by MLRA
+   summary_long_by_MLRA<- my_data |>
+  pivot_longer(cols = c(Sand), 
+  names_to = "variable", values_to = "value") |>
+  group_by(MLRA) |>
+  summarise(n=sum(!is.na(value)),mean=mean(value, na.rm = TRUE),
+  #median=median(value,na.rm = TRUE),
+  #IQR = IQR(value, na.rm = TRUE),
+  sd= sd(value, na.rm = TRUE),
+  P5 = quantile(value, probs = 0.05, na.rm = TRUE),
+  P95 = quantile(value, probs = 0.95, na.rm = TRUE),
+  Range = P95 - P5)
+  summary_long_by_MLRA
+
+
+```
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(emmeans)
+library(multcomp)   
+library(ggplot2)
+library(car)
+
+long_data <- my_data |>
+  pivot_longer(cols = c(Net_NMIN24_intact, Net_NMIN24_crushed),
+               names_to = "Treatment",
+               values_to = "NMIN") |>
+  mutate(
+    Treatment = ifelse(grepl("intact", Treatment), "Intact", "Crushed")
+  )
+anova_model <- aov(NMIN ~ Land_use * Treatment, data = long_data)
+summary(anova_model)
+
+
+```

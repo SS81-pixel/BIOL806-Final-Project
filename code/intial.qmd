@@ -1,0 +1,100 @@
+---
+title: "Final project"
+format: html
+---
+
+Final Project
+Abstract
+Introduction
+Method
+Result
+Conclusion
+
+```{r}
+getwd()
+library(readxl)
+my_data <-read_xlsx("../input/NCDataFile.xlsx" )
+library(ggplot2)
+CT_full <- subset(my_data, Land_use == "1CT")
+NT_full <- subset(my_data, Land_use == "2NT")
+GR_full <- subset(my_data, Land_use == "3GR")
+WL_full <- subset(my_data, Land_use == "4WL")
+
+```
+
+
+
+Working on 268 data points and trying to see the relation between sand content and protected carbon.
+```{r, message=FALSE, warning=FALSE}
+ggplot(my_data,aes(x=Sand, y=ProtC3d,color=Land_use,shape = Land_use))+
+  geom_point(size = 2.5) +
+  geom_smooth(method = "lm", se=FALSE, aes (color = Land_use)) + 
+  theme_classic()+
+ facet_wrap(~Land_use,scales="free")+
+   labs(x=" Sand (kg/kg)", y="Protected Carbon",title = "Scatterplot of Protected carbon over sand content",color="Land use",shape="Land use",subtitle = "3 days")+
+  theme(axis.text = element_text(size = 10, colour = "black"),
+        axis.title = element_text(size = 10),legend.position = "right")+
+scale_color_manual(values = c(CT="orange",GR= "darkcyan",NT="blue",WL="brown"))+
+  scale_shape_manual(values = c(CT=1, GR=5, NT=0, WL=25))
+
+```
+
+```
+Correlation of sand with Protected carbon (3 and 24 days) and nitrogen of entire data (268 data points)
+
+```{r}
+library(broom)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+
+# Subset full data with new variable names to avoid overwriting
+CT_full <- subset(my_data, Land_use == "1CT")
+NT_full <- subset(my_data, Land_use == "2NT")
+GR_full <- subset(my_data, Land_use == "3GR")
+WL_full <- subset(my_data, Land_use == "4WL")
+
+cor_results_full <- rbind(
+  # ProtC3d
+  cbind(Land_use = "CT", Variable = "ProtC3d", tidy(cor.test(CT_full$Sand, CT_full$ProtC3d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "NT", Variable = "ProtC3d", tidy(cor.test(NT_full$Sand, NT_full$ProtC3d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "GR", Variable = "ProtC3d", tidy(cor.test(GR_full$Sand, GR_full$ProtC3d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "WL", Variable = "ProtC3d", tidy(cor.test(WL_full$Sand, WL_full$ProtC3d, method = "pearson", use = "complete.obs"))),
+
+  # ProtC24d
+  cbind(Land_use = "CT", Variable = "ProtC24d", tidy(cor.test(CT_full$Sand, CT_full$ProtC24d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "NT", Variable = "ProtC24d", tidy(cor.test(NT_full$Sand, NT_full$ProtC24d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "GR", Variable = "ProtC24d", tidy(cor.test(GR_full$Sand, GR_full$ProtC24d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "WL", Variable = "ProtC24d", tidy(cor.test(WL_full$Sand, WL_full$ProtC24d, method = "pearson", use = "complete.obs"))),
+
+  # ProtN24d
+  cbind(Land_use = "CT", Variable = "ProtN24d", tidy(cor.test(CT_full$Sand, CT_full$ProtN24d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "NT", Variable = "ProtN24d", tidy(cor.test(NT_full$Sand, NT_full$ProtN24d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "GR", Variable = "ProtN24d", tidy(cor.test(GR_full$Sand, GR_full$ProtN24d, method = "pearson", use = "complete.obs"))),
+  cbind(Land_use = "WL", Variable = "ProtN24d", tidy(cor.test(WL_full$Sand, WL_full$ProtN24d, method = "pearson", use = "complete.obs")))
+)
+
+# Clean and format results
+Cor_results_full <- cor_results_full %>%
+  select(Land_use, Variable, parameter, estimate, p.value, conf.low, conf.high) %>%
+  rename( "Land use" = Land_use, n = parameter,r = estimate,p = p.value, "Conf Low" = conf.low, "Conf High" = conf.high) %>%
+  mutate(r = round(r, 2),p = round(p, 3),`Conf Low` = round(`Conf Low`, 2),`Conf High` = round(`Conf High`, 2))
+
+# Display the results as a formatted table
+kbl(Cor_results_full, caption = "Correlation of Sand with Protected Carbon (3 and 24 days) and Nitrogen (24 days) (Full Data)") %>%
+  kable_classic(full_width = FALSE, html_font = "Cambria")
+
+```
+
+```{r}
+
+summary(Conventional_till$Sand)
+summary(Conventional_till$STBAi)
+sum(is.na(Conventional_till$Sand))
+sum(is.na(Conventional_till$STBAi))
+length(na.omit(Conventional_till$Sand))
+length(na.omit(Conventional_till$STBAi))
+
+```
+

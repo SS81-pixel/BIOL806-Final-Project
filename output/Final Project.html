@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Final Project BIOL 806</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="Final Project_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Final Project_files/libs/quarto-html/quarto.js"></script>
+<script src="Final Project_files/libs/quarto-html/popper.min.js"></script>
+<script src="Final Project_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Final Project_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Final Project_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Final Project_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Final Project_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Final Project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Final Project_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Final Project_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="Final Project_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final Project BIOL 806</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="final-project" class="level1">
+<h1>Final Project</h1>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Soil aggregation is a crucial phenomenon essential for maintaining soil health, as it improves soil’s physical structure, provides resistance to erosion, and facilitates nutrient retention. In this context, water-stable macroaggregates (&gt;0.25 mm) are important because of their capacity to store and stabilize soil organic carbon and nitrogen within them. However, even though previous studies have highlighted the potential macroaggregates-protected organic matter, its magnitude and variation among land uses and physiographic regions in North Carolina are poorly understood. This study investigated the soil carbon (C) and nitrogen (N) content of water-stable macroaggregates across four major physiographic regions of North Carolina: Southern Blue Ridge, Southern Piedmont, Southern Coastal Plain, and Atlantic Flatwoods. The soil samples were collected from 21 research stations across four land uses, two from cropland management systems (conventional and no-till) and two from conservation management systems (grassland and woodland). To assess the influence of physiography and land use on C and N mineralization, water-stable macroaggregates were incubated for 24 days at 25°C with 50% water-filled pore space. Physical protection of C and N within macroaggregates was measured as the differences in C and N mineralization between crushed and intact macroaggregates. Crushing was done to expose protected C and N to enhanced mineralization. Water-stable macroaggregates were enriched in both total and mineralizable C and N fractions relative to the whole soil. While land use influenced C and N mineralization, physiography did not have a significant impact. Carbon mineralization was greater in crushed macroaggregates when compared to intact macroaggregates (p&lt;0.001), indicating the release of physically protected soil organic C from water-stable macroaggregates. Overall, this study highlighted the role of water-stable macroaggregates in protecting of mineralizable carbon. Water-stable macroaggregates are an integral component of soil organic carbon and nitrogen storage and critical for mitigating the effects of changing climate.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Soil is the largest terrestrial reservoir for carbon, storing approximately 2344 Pg carbon within the top 3 meters of the profile <span class="citation" data-cites="jobbágy2000">(<a href="#ref-jobbágy2000" role="doc-biblioref">Jobbágy and Jackson 2000</a>)</span>. However, if managed poorly, soil may shift from being a carbon sink to becoming a source of greenhouse gases. To mitigate this risk, soil aggregates play a vital role because a substantial portion of organic matter is stored within them. For instance, <span class="citation" data-cites="ding2021">(<a href="#ref-ding2021" role="doc-biblioref">Ding et al. 2021a</a>)</span>found that 75-84% of soil organic carbon and 67-81% of total nitrogen were stored in aggregates. Soil aggregation is a dynamic process developed through complex interactions between abiotic and biotic factors over time, which, in turn, influences numerous biological, physical, and chemical properties of soil <span class="citation" data-cites="garland2024">(<a href="#ref-garland2024" role="doc-biblioref">Garland et al. 2024</a>)</span>). Soil aggregates provide habitat to microbes, protect them against predation, and influence their activities <span class="citation" data-cites="rillig2017">(<a href="#ref-rillig2017" role="doc-biblioref">Rillig, Muller, and Lehmann 2017</a>)</span>. The interaction of physical and chemical properties of soil with biological communities present in them contribute to multiple functions of ecosystems, such as root growth, nutrient cycling, carbon dynamics, soil aeration, soil water infiltration, and purification, along with providing resistance against wind and water erosion <span class="citation" data-cites="sullivan2022">(<a href="#ref-sullivan2022" role="doc-biblioref">Sullivan et al. 2022</a>)</span>. Moreover, aggregation also mitigates soil compaction <span class="citation" data-cites="abdelrhman2025">(<a href="#ref-abdelrhman2025" role="doc-biblioref">Abdelrhman et al. 2025</a>)</span> and affects evapotranspiration to help in irrigation calculations (Gliński et al., 2011). In this context, aggregates become crucial for maintaining soil health and mitigating changing climate.</p>
+<p>macroaggregates (&gt;0.25 mm) generally contain greater carbon concentrations than microaggregates (0.25 mm-0.053 mm) due to involvement of transient organic binding agents in the formation (citation). In addition to varying carbon concentration, nature organic matter also varies with aggregates. The organic matter in macroaggregates tend to be more labile and less processed when compared to microaggregates, which are less labile due to their physical protection and chemically recalcitrant nature of microbe-mineral bonds and organo-mineral complexes present in it <span class="citation" data-cites="elliott1986">(<a href="#ref-elliott1986" role="doc-biblioref">Elliott 1986</a>)</span>. As a result, the turnover time of soil organic carbon in macroaggregates is smaller (44 ± 18 years) than the microaggregates (209 ± 95 years) <span class="citation" data-cites="jastrow2005">(<a href="#ref-jastrow2005" role="doc-biblioref">Lal 2005</a>)</span>. This difference is likely possible based on size of both types of aggregates as macroaggregates (&gt;0.25 mm) are less stable and disintegrate into smaller microaggregates resulting faster turnover of it. The smaller turnover rate and labile nature of organic carbon, highlights the importance of studying macroaggregates. For instance, <span class="citation" data-cites="kan2020">(<a href="#ref-kan2020" role="doc-biblioref">Kan et al. 2020</a>)</span>, compared different tillage practices (no-till with straw, rotatory tillage with straw, conventional till with straw, and conventional tillage without straw), and reported that irrespective of tillage practice, larger macroaggregates (&gt;2 mm) consistently had the highest proportion of soil organic carbon stock, followed by smaller macroaggregates (0.25-2 mm) and then microaggregates. These findings emphasis macroaggregates for being critical for in soil carbon storage and its dynamics.</p>
+<p>Land use affects carbon and aggregate stabilization; therefore, it is essential to understand them for developing better management practices. Croplands have the highest potential to sequester carbon when compared to grasslands and forests <span class="citation" data-cites="chen2019">(<a href="#ref-chen2019" role="doc-biblioref">Chen et al. 2019</a>)</span>.&nbsp; This is because croplands, which are usually the most disturbed system have been depleted of so much carbon that they have a larger deficit to overcome to meet potential, as compared with grasslands and woodlands that may already be at maximum potential. Therefore, improving aggregate stability in cropland systems becomes essential. Additionally, disruptive agricultural practices can lead to the breakage of fungal hyphae and adversely affect macroaggregates formation <span class="citation" data-cites="beare1994">(<a href="#ref-beare1994" role="doc-biblioref">Beare, Hendrix, and Coleman 1994</a>)</span>; and elimination of tillage significantly promotes the abundance of arbuscular mycorrhizal fungi in aggregates<span class="citation" data-cites="helgason2010">(<a href="#ref-helgason2010" role="doc-biblioref">Helgason, Walley, and Germida 2010</a>)</span>. These mycorrhizal fungi produce glomalin-related soil protein, which is a glue that contributes to soil aggregation. Glomalin is strongly correlated with soil aggregation in transitioning of management practice from conventional tillage to no-till <span class="citation" data-cites="wright1999">(<a href="#ref-wright1999" role="doc-biblioref">Wright, Starr, and Paltineanu 1999</a>)</span>. The correlation was especially high with water-stable aggregates of 1-2 mm size <span class="citation" data-cites="wright1998">(<a href="#ref-wright1998" role="doc-biblioref">Wright and Upadhyaya 1998</a>)</span>. According to <span class="citation" data-cites="six2000">(<a href="#ref-six2000" role="doc-biblioref">Six, Elliott, and Paustian 2000</a>)</span>, an increase in the intensity of cultivation practices accelerates the decomposition of soil organic carbon, leading to disintegration of carbon-rich macroaggregates in soil. However, this process could be reversed when land is restored <span class="citation" data-cites="delelegn2017">(<a href="#ref-delelegn2017" role="doc-biblioref">Delelegn et al. 2017</a>)</span>. Conservation cultivation practices such as no-tillage promote soil cover and reduce physical soil disturbances, which help maintain optimum ecological function by enhancing soil biological activity and limiting erosion <span class="citation" data-cites="franzluebbers2022">(<a href="#ref-franzluebbers2022" role="doc-biblioref">Alan J. Franzluebbers 2022a</a>)</span>. No-tillage reduces the contact between surface litter and soil microbes, resulting in slower decomposition rate than with conventional tillage. Undisturbed soil provides a habitat where soil flora and fauna can flourish and promote aggregate formation.</p>
+<p>Well-managed grassland may be one of the best land management strategies to store soil carbon and nitrogen, as perennial grass and legume pastures enhance soil organic matter in surface soil. It is the best way to reinstate long-term productivity of agricultural soil. Due to their year-round productivity and dense root systems, perennial grasslands benefit soil aggregation, particularly in comparison with cultivated croplands (Franzluebbers, 2012). However, intensively managed grasslands with high stocking rate, chemical input, and farm machinery can lead to soil compaction, which limits soil aggregation processes. Franzluebbers (2000) reported that in Southern Piedmont of Georgia, soil aggregate stability and mean-weight diameter (MWD) were greater under long-term pasture management than under conservation tillage and woodland.</p>
+<p>Woodland is globally recognized as a conservation land use to overcome the negative influences of land degradation. The forest system has greater retention of organic matter and litter and less fluctuation of soil moisture and temperature under the canopy cover to help maintain aggregate stability. In the forest ecosystem, depending on plant species, mycorrhizal fungi increase soil aggregation through fungal enmeshment and secreting glomalin-related soil protein. According to<span class="citation" data-cites="cerdà1998">(<a href="#ref-cerdà1998" role="doc-biblioref">Cerdà 1998</a>)</span> grassland may be a better option to restore land quickly after land disturbance such as fire or cultivation, however, in the long term woodland vegetation provides greater aggregate stability.</p>
+<p>Soil texture plays a critical role in aggregate formation and stability through the influence of fine soil particles such as clay and silt. It has a strong association with dry-stable aggregates compared to water-stable aggregates. To quantify the influence of soil texture, the sand fraction acts as the single-most effective component associated with soil organic carbon and nitrogen because clay and silt particles tend to behave more similarly and the effect of sand is a simple inverse of clay and silt (Franzluebbers, 2024). <span class="citation" data-cites="ding2021a">(<a href="#ref-ding2021a" role="doc-biblioref">Ding et al. 2021b</a>)</span> reported in a 27-year-old long-term experiment, with increasing sand content, macroaggregates concentration decreased which led to negative influence on soil organic carbon and nitrogen. They found a similar trend for microaggregates which led to the conclusion that finer texture supported higher mass percentage and stability when compared to coarser textures.</p>
+<p>There has been no study which has measured the protected carbon and nitrogen within macroaggregates in North Carolina. Such study is important in North Carolina’s hot and humid climate, which also gets intense rainfall and a history of intensive cultivation practices which led to soil erosion is detrimental to soil aggregation and health. Therefore, to understand this physical protection, a study was conducted by comparing crushed with intact water stable macroaggregates in North Carolina.</p>
+<p>Our hypothesis was that water stable macroaggregates (0.25-4.75 mm) protect carbon and nitrogen within it and this protection can vary across different land uses. We hypothesized that the protected carbon and nitrogen would increase with increasing conservation gradient form conventional till to no-till, grassland, and the most conserved woodland. Additionally, we hypothesized that changing physiography would also influenced protected carbon and nitrogen due to varying soil texture across different regions. This is because the increasing sand content negatively associated with aggregation <span class="citation" data-cites="franzluebbers2022a">(<a href="#ref-franzluebbers2022a" role="doc-biblioref">Alan J. Franzluebbers 2022b</a>)</span> which can be negatively related with protected carbon and nitrogen.</p>
+</section>
+<section id="method" class="level2">
+<h2 class="anchored" data-anchor-id="method">Method</h2>
+<section id="site-selection" class="level3">
+<h3 class="anchored" data-anchor-id="site-selection">2.1 Site Selection</h3>
+<p>Soil samples were collected from 268 fields in 21 research stations across North Carolina from December 2020 to February 2021. These research stations were located in four major land resource areas (MLRA): Atlantic Flatwood (n = 16), Southern Piedmont (n = 100), Southern Blue Ridge (n = 40), and Southern Coastal Plain (n= 112). They operated under the joint management of North Carolina State University and the North Carolina Department of Agriculture and Consumer Services. Four long-term land uses of conventional-till cropland (n = 72), no-till cropland (n = 36), grassland (n = 82), and woodland (n = 78) were sought at every research station. When all four land uses were not present, then at least two contrasting land uses were sampled. Four separate fields were sampled under each land use within a research station. An exception was under woodland where whole blocks of a single stand were sometimes subsampled with sampling locations separated by at least 30 m from each other.</p>
+</section>
+<section id="soil-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="soil-sampling">2.2 Soil Sampling</h3>
+<p>Soil samples were collected at 0-10 cm depth from each field using a 4 cm inside diameter push probe. Soil aggregation is a surface phenomenon that decreases with depth <span class="citation" data-cites="franzluebbers1997">(<a href="#ref-franzluebbers1997" role="doc-biblioref">A. J. Franzluebbers and Arshad 1997</a>)</span>, this study focused on the of 0-10 cm depth of soil only. Five soil cores were composited at each sampling site: one from the center and the remaining four samples 10 m away, cardinally from the center. The representative sampling locations were tagged with the GPS coordinates for soil taxonomical information from SoilWeb (California Soil Resource Lab 2022). Before sampling, the surface residue and any living plant material to height of 5 cm aboveground was removed from a 30 cm inside diameter ring at all of the soil coring locations.</p>
+</section>
+<section id="soil-processing" class="level3">
+<h3 class="anchored" data-anchor-id="soil-processing">2.3 Soil Processing</h3>
+<p>The composited soil samples were transferred into labeled paper bags and later dried at 55 in the oven for 3 days until their weight became constant. Soil samples were then sieved through the 4.75 mm opening screen by gently crushing them with a pestle. Any coarse fragments, such as stones and plant residues were removed. The sieve selection deviated from typical 2 mm openings to balance homogeneity and suitable aggregate sizes for stability and aeration during incubation. This was done to prevent undesirable disturbance from fine sieving that can have a large impact on biological activity of soil (Franzluebbers, 1999).</p>
+<p>The fractions of soil aggregates were determined using a standardized procedure in the Soil Ecology and Management lab (Franzluebbers, 2022). Different-sized dry-stable aggregates were collected by placing soil samples on top of the 20 cm diameter nest of sieves with mesh sizes of 1.0, 0.25, and 0.053 mm. Then, the sieves were shaken using a CSC Scientific sieve shaker (Catalog no. 18480, CSC Scientific Company). Soils that remained on each sieve and passed through the 0.053 mm screen were weighed for their respective size classes. All aggregate classes were added together for subsequent determination of water-stable aggregation. Wet sieving was performed using a nest of screens, mechanically raised and lowered in a constant volume of water, extracting different-sized aggregates from the soil samples (Yoder, 1936). Soil previously used for dry-stable aggregation was placed on top of the nest of sieves, which were 15 cm in diameter with mesh sizes of 1.0 mm and 0.25 mm. The nest of sieves was immersed directly in water and oscillated for 10 minutes with a 20-mm stroke length at 30 cycles min<sup>-1</sup>.Both sieves remained fully immersed in water throughout the oscillation. At the end of 10 minutes, both sieves were removed and placed in an oven at 55&nbsp;overnight. Water containing the soil fraction passing through the 0.25 mm screen was poured over a 0.053 mm screen separately and gently washed with a stream of water. The microaggregate fraction retained on the sieve was transferred to a plastic boat for drying. Silt-clay fraction (&lt;0.053 mm) was calculated as the difference between the initial soil mass and the sum of all collected aggregate fractions.</p>
+<p>Soil-test biological activity was determined by measuring the <em>“flush of CO<sub>2</sub>”</em> according to the standard method described by (Franzluebbers, 2020). For this study, a constant volume of intact water-stable macroaggregates was scooped out of the envelope using a 20-mL scoop and transferred into a 60-mL glass bottle. Some samples were limited in amount; therefore, a 10-mL scoop was used. The remaining macroaggregates were milled for 1 minute in a ball mill and same scoop was used to take out crushed macroaggregates and transferred into another 60-mL glass bottle. Both crushed and intact aggregates were wetted with deionized water to 50% water-filled pore space. The glass bottle containing rewetted soil was placed into a 1-L mason jar along with a 30-mL Nalgene bottle containing 5-mL of 0.5 mol L<sup>-1</sup> NaOH to trap CO<sub>2</sub> and a 10-mL vial containing water to maintain humidity. The mason jar was sealed and incubated for 24 days at 25 . Alkali traps were replaced on the 3<sup>rd</sup> day of incubation and removed traps were sealed air-tight until the titration process began. Each NaOH trap was titrated against 0.5 M of HCl until the end point of the phenolphthalein color indicator was achieved after putting 1.5 M BaCl<sub>2</sub> solution<sub>,</sub> which was precipitated as BaCO<sub>3</sub>. A magnetic bar was placed in the alkali trap, and acid was added drop by drop while vigorously stirring it the magnetic plate until the pink color changed into a colorless solution (pH~9.3). After every 10 samples, a blank alkali trap that was kept in the mason jar without any soil sample was titrated.</p>
+<p>The carbon mineralized during the first three days following rewetting of dried soil was called soil-test biological activity (STBA). The carbon mineralized between 3 and 24 days was called basal soil respiration (BSR). The sum of carbon mineralized over these two periods was called cumulative carbon mineralization (CMIN). Protected soil carbon was determined as the difference between the carbon mineralization of intact macroaggregates and the mineralized carbon in crushed macroaggregates over each respective incubation interval.</p>
+<p>After incubation, soil samples were removed from the mason jar and placed in an oven for 3 days at 55 . After drying, they were sieved through a 2 mm screen and transferred into a labeled coin envelope. Inorganic nitrogen (NH<sub>4</sub><sup>+</sup> and NO<sub>3</sub><sup>-</sup>) was measured for water-stable macroaggregates prior to incubation (day 0) and at the end of incubation (day 24) for crushed and intact aggregates. An aliquot of 10 g (± 0.02) was weighed into a 30-mL Nalgene bottle and 20 mL of 2 M KCl solution was added to the bottle and shaken (6000-00 Shaker) for 30 minutes at a high-speed setting. After every 60 samples, two blanks without soil and one standard soil of 5 g of sample with 20 ml KCl solution were also analyzed. Solutions were extracted through Whatman No.&nbsp;5 filter paper and stored in the freezer at -20 &nbsp;until these extracts were analyzed through an autoanalyzer.</p>
+<p>Net nitrogen mineralization (mg kg<sup>-1</sup> 24 d<sup>-1</sup>) was calculated by the difference in inorganic nitrogen between Day 0 and Day 24 of incubation. The measurement of inorganic nitrogen used colorimetric techniques, with salicylate nitroprusside used for NH<sub>4</sub><sup>+</sup>-N and hydrazine reagent used for NO<sub>3</sub><sup>-</sup>-N in a segmented flow analyzer (Bran-Luebbe AutoAnalyzer 3 (EPA Method 353.1) (Franzluebbers et al., 2021). Protected inorganic nitrogen inside the aggregates were calculated as the difference between the net inorganic nitrogen of crushed aggregates and intact aggregates.</p>
+<p>Sand content of whole soil was determined according to standard method determined by ((Franzluebbers, 2022). Soil samples were scooped out using a 59-mL scoop and transferred into 125-mLNalgen bottle and weighed. Then a 100 mL of 0.1 M tetrasodium pyrophosphate (Na<sub>4</sub>P<sub>2</sub>0<sub>7</sub>) was dispensed and shaken (6000-00 Shaker) for 12-16 tbl-Variable-Summaryhours at a low-speed setting. Subsequently, the soil solution was transferred to a 1-L volumetric cylinder and brought to volume using deionized water. After plunging the solution 10 times, the soil solution was allowed to settle for 5 hours and sieved through 0.053-mm opening sieve.</p>
+</section>
+<section id="statistical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-analysis">2.4 Statistical Analysis</h3>
+<p>Statistical summary of soil was calculated using R version 4.4.2 <span class="citation" data-cites="rcoreteam2024">(<a href="#ref-rcoreteam2024" role="doc-biblioref">R Core Team 2024</a>)</span>, which included mean, median, and interquartile and 5-95% range (<a href="#tbl-Variable-Summary" class="quarto-xref">Table&nbsp;1</a>). Correlation between variables is considered significant at p&lt;0.05. ANCOVA was conducted on SAS version 9.4 (SAS Institute, Cary, NC) where land use was main effect and sand content was continuous covariate declared significant at p&lt;0.05. T-test was conducted across land uses for to determine the significant protection carbon (3 and 24 days) and nitrogen (24 days).</p>
+<p>The following model was used:</p>
+<p><span class="math display">\[
+\hat{y}=\beta_0 + \beta_{Landuse} + \beta_{Sand} + \beta_{Landuse*Sand}
+\]</span></p>
+<p>Where Y was response variable for different soil properties measure. Land use included four levels of each land management practice and sand content was continous variable that varied across land uses.</p>
+<div class="cell">
+<div id="tbl-Variable-Summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Variable-Summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of response variables by landuse
+</figcaption>
+<div aria-describedby="tbl-Variable-Summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="lightable-classic do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Land_use</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">variable</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SD</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">P5</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">P95</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">STBA intact</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">148</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">311</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">STBA intact</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">279</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">483</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">STBA intact</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">395</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">688</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">STBA intact</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">321</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">703</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">STBA crushed</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">381</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">STBA crushed</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">315</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">146</td>
+<td style="text-align: right;">563</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">STBA crushed</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">442</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">158</td>
+<td style="text-align: right;">731</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">STBA crushed</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">332</td>
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">695</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">BSR intact</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">332</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">649</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">BSR intact</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">519</td>
+<td style="text-align: right;">178</td>
+<td style="text-align: right;">254</td>
+<td style="text-align: right;">805</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">BSR intact</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">688</td>
+<td style="text-align: right;">241</td>
+<td style="text-align: right;">269</td>
+<td style="text-align: right;">1056</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">BSR intact</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">749</td>
+<td style="text-align: right;">297</td>
+<td style="text-align: right;">253</td>
+<td style="text-align: right;">1169</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">BSR crushed</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">359</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">759</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">BSR crushed</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">588</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">261</td>
+<td style="text-align: right;">1011</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">BSR crushed</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">722</td>
+<td style="text-align: right;">224</td>
+<td style="text-align: right;">369</td>
+<td style="text-align: right;">1077</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">BSR crushed</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">864</td>
+<td style="text-align: right;">322</td>
+<td style="text-align: right;">403</td>
+<td style="text-align: right;">1319</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">CMIN intact</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">482</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">163</td>
+<td style="text-align: right;">991</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">CMIN intact</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">798</td>
+<td style="text-align: right;">293</td>
+<td style="text-align: right;">395</td>
+<td style="text-align: right;">1284</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">CMIN intact</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">1084</td>
+<td style="text-align: right;">396</td>
+<td style="text-align: right;">460</td>
+<td style="text-align: right;">1715</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">CMIN intact</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">1069</td>
+<td style="text-align: right;">463</td>
+<td style="text-align: right;">377</td>
+<td style="text-align: right;">1832</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">CMIN crushed</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">543</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">1117</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">CMIN crushed</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">903</td>
+<td style="text-align: right;">326</td>
+<td style="text-align: right;">431</td>
+<td style="text-align: right;">1486</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">CMIN crushed</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">1170</td>
+<td style="text-align: right;">392</td>
+<td style="text-align: right;">567</td>
+<td style="text-align: right;">1831</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">CMIN crushed</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">1196</td>
+<td style="text-align: right;">472</td>
+<td style="text-align: right;">528</td>
+<td style="text-align: right;">2036</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">Protected carbon (0-3 days)</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">-51</td>
+<td style="text-align: right;">146</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">Protected carbon (0-3 days)</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">-69</td>
+<td style="text-align: right;">116</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">Protected carbon (0-3 days)</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">111</td>
+<td style="text-align: right;">-82</td>
+<td style="text-align: right;">183</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">Protected carbon (0-3 days)</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">-99</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">Protected carbon C (24 days)</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">223</td>
+<td style="text-align: right;">-204</td>
+<td style="text-align: right;">472</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">Protected carbon C (24 days)</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">-183</td>
+<td style="text-align: right;">452</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">Protected carbon C (24 days)</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">226</td>
+<td style="text-align: right;">-191</td>
+<td style="text-align: right;">408</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">Protected carbon C (24 days)</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">247</td>
+<td style="text-align: right;">-197</td>
+<td style="text-align: right;">421</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">Net N mineralization intact</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">66</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">Net N mineralization intact</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">133</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">Net N mineralization intact</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">194</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">Net N mineralization intact</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">173</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">Net N mineralization crushed</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">87</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">Net N mineralization crushed</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">140</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">Net N mineralization crushed</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">179</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">Net N mineralization crushed</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">181</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conventional tillage</td>
+<td style="text-align: left;">Protected nitrogen (24 days)</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">-19</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No-till</td>
+<td style="text-align: left;">Protected nitrogen (24 days)</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">-24</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grassland</td>
+<td style="text-align: left;">Protected nitrogen (24 days)</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">-36</td>
+<td style="text-align: right;">26</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woodland</td>
+<td style="text-align: left;">Protected nitrogen (24 days)</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">-21</td>
+<td style="text-align: right;">41</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+</section>
+<section id="result" class="level2">
+<h2 class="anchored" data-anchor-id="result">Result</h2>
+<section id="carbon-mineralization-across-the-land-uses" class="level3">
+<h3 class="anchored" data-anchor-id="carbon-mineralization-across-the-land-uses">3.1 Carbon mineralization across the land uses</h3>
+<p>Carbon mineralization was measured for both intact and crushed types of macroaggregates across the land uses. A general linear model was conducted across land use, which showed that soil-test biological activity of intact (R<sup>2</sup>= 51%) and crushed (R<sup>2</sup>= 49%) macroaggregates was significantly influenced by land use, sand, and their interaction. The order of the soil-test biological activity was grassland &gt; woodland = no-till &gt; conventional till in both types of macroaggregates. Cumulative carbon mineraliazation was also significantly influenced by land use, sand content, and their interaction, both in intact (R<sup>2</sup> = 57%) and crushed macroaggregates (R<sup>2</sup> = 56%). The order of cumulative mineralization was woodland = grassland &gt; no-till &gt; conventional tillage in both types of macroaggregates. The changing order of mineralization for woodland and grassland for each duration suggests that there was slow mineralization in woodland compared to grassland at the beginning of the incubation, which might be due to the nature of the organic matter present in the woodland. Unlike carbon mineralization, protected carbon had no such influence of explanatory variables.</p>
+</section>
+<section id="nitrogen-mineralization-across-the-land-uses" class="level3">
+<h3 class="anchored" data-anchor-id="nitrogen-mineralization-across-the-land-uses">3.2 Nitrogen mineralization across the land uses</h3>
+<p>Net nitrogen mineralization of intact and crushed macroaggregates, which is the difference of available nitrogen before incubation (0 days) and after incubation (24 days), had a significant effect of land use, sand content, and interaction. The order of net nitrogen mineralization in intact macroaggregates was grassland &gt; woodland = no-till &gt; conventional tillage, and in crushed macroaggregates was grassland = woodland &gt; no-till = conventional till. Similar to the protected carbon, protected nitrogen was not influenced by any factors.</p>
+</section>
+<section id="protected-carbon-and-nitrogen-across-the-locations" class="level3">
+<h3 class="anchored" data-anchor-id="protected-carbon-and-nitrogen-across-the-locations">3.3 Protected carbon and nitrogen across the locations</h3>
+<p>The above sections mentioned about the protection of carbon and nitrogen across the land uses. In this section, we tried to investigate the effect of research location on the protection carbon and nitrogen. General linear model was conducted to test if protected carbon and nitrogen were significant within each of the research locations. The mean values of protected carbon for 3 days across the 21 locations vary from -8 to 70 mg kg 3 d<sup>-1</sup>, and 20 locations had positive values for protection except one location, Umstead Research Farm in Southern Piedmont Major Land Resource Area had negative value. A t-test was conducted to check if protected carbon was significant different from zero, and 6 locations had significant protected carbon for the first 3 days. Similar test for protected carbon for 24 days showed that the mean value for protection varies from -16 to 271 mg kg 24 d<sup>-1</sup>, and 19 locations had positive values for protected carbon. Only two locations, Currin Farm in the Southern Piedmont Major Land Resource Area and Mountain Research Station in the Southern Blue Major Land Resource Area, had a negative value for protected carbon and 7 locations had protected carbon significantly greater than 0.</p>
+<p>Unlike protected carbon, in the case of protected nitrogen, the GLM mean values varied from – 11 to 17 mg kg<sup>-1</sup>. A total of 10 locations had negative values, and only 2 of them are significantly different than zero. The negative values of protected nitrogen might be the result of the immobilization of released nitrogen by microbes after crushing macroaggregates.</p>
+</section>
+<section id="influence-of-sand-gradient-on-carbon-and-nitrogen-mineralization-within-each-land-use" class="level3">
+<h3 class="anchored" data-anchor-id="influence-of-sand-gradient-on-carbon-and-nitrogen-mineralization-within-each-land-use">3.4 Influence of sand gradient on carbon and nitrogen mineralization within each land use</h3>
+<p>Sand content varied among 268 soil samples collected from 21 research stations. Sand concentration in conventional till (n = 72) was 0.69 <span class="math inline">\(∓\)</span> 0.2 g kg<sup>-1</sup> (mean <span class="math inline">\(∓\)</span> SD), in no-till (n = 36) was 0.59 <span class="math inline">\(∓\)</span> 0.1 g kg<sup>-1</sup>, in grassland (n = 82) was 0.68 <span class="math inline">\(∓\)</span> 0.1 g kg<sup>-1</sup>, and in woodland (n = 78) was 0.62 <span class="math inline">\(∓\)</span> 0.1 g kg<sup>-1</sup>. Statistical limits of 5-95% were 0.38-0.91 g kg<sup>-1</sup> for conventional tillage, 0.34-0.77 g kg<sup>-1</sup> for no-till, 0.43-0.89 g kg<sup>-1</sup> for grassland, and 0.38–0.82 g kg<sup>-1</sup> for woodland.</p>
+<div class="cell">
+<div id="tbl-Variable-corr" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Variable-corr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Correlations of variables with sand by landuse
+</figcaption>
+<div aria-describedby="tbl-Variable-corr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="lightable-classic do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">variable</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">1CT</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">2NT</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">3GR</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">4WL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STBA intact</td>
+<td style="text-align: left;">-0.58***</td>
+<td style="text-align: left;">-0.43**</td>
+<td style="text-align: left;">-0.61***</td>
+<td style="text-align: left;">-0.59***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STBA crushed</td>
+<td style="text-align: left;">-0.56***</td>
+<td style="text-align: left;">-0.41*</td>
+<td style="text-align: left;">-0.61***</td>
+<td style="text-align: left;">-0.53***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMIN intact</td>
+<td style="text-align: left;">-0.64***</td>
+<td style="text-align: left;">-0.41*</td>
+<td style="text-align: left;">-0.62***</td>
+<td style="text-align: left;">-0.61***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMIN crushed</td>
+<td style="text-align: left;">-0.55***</td>
+<td style="text-align: left;">-0.42**</td>
+<td style="text-align: left;">-0.68***</td>
+<td style="text-align: left;">-0.53***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Net N mineralization crushed</td>
+<td style="text-align: left;">-0.4***</td>
+<td style="text-align: left;">-0.37*</td>
+<td style="text-align: left;">-0.64***</td>
+<td style="text-align: left;">-0.58***</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Net N mineralization intact</td>
+<td style="text-align: left;">-0.45***</td>
+<td style="text-align: left;">-0.45**</td>
+<td style="text-align: left;">-0.66***</td>
+<td style="text-align: left;">-0.62***</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The general linear model declared that sand had a significant influence on carbon (<a href="#fig-protC-graph" class="quarto-xref">Figure&nbsp;1</a>, <a href="#fig-Carbon-graph" class="quarto-xref">Figure&nbsp;2</a>) and nitrogen mineralization (<a href="#fig-protN-graph" class="quarto-xref">Figure&nbsp;3</a>), but not on the protection of each. Soil-test biological activity (STBA) is significantly influenced by sand content in both intact and crushed macroaggregates. A similar effect was observed in cumulative carbon mineralization and net nitrogen mineralization in both types of aggregates. The influence was negative and moderate in all the land use (<a href="#tbl-Variable-corr" class="quarto-xref">Table&nbsp;2</a>). Correlation in both carbon and nitrogen mineralization was stronger in grasslands and a little weaker in no-till land use.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-protC-graph" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-protC-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Final-Project_files/figure-html/fig-protC-graph-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-protC-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Scatterplot of Protected carbon over sand content
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-Carbon-graph" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Carbon-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Final-Project_files/figure-html/fig-Carbon-graph-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Carbon-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Scatterplot of Protected carbon over sand content
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-protN-graph" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-protN-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Final-Project_files/figure-html/fig-protN-graph-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-protN-graph-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Scatterplot of Protected Nitrogen over sand content
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>The high carbon and nitrogen mineralization in grassland and woodland was possible due to higher organic matter present in these land uses when compared to croplands. Also, grassland get organic input through root through the year and are undisturbed expect in cased of pastures which had animal grazing, also their manure also contribute to the increasing the amount of organic matter and results to higher aggreagtion. Woodlands get litter input and are the least disturbed land use until they are ready to cut down for commercial purpose. These two factors helps woodlands to have more of the aggregation. No-till cropland had carbon mineralization of similar magnitude to woodland because in this study no-till cropland has a lot of organic matter input and less disturbance as a part of management practice. Conventional tillage being the most disturbed and least organic input getting system which might be the reason of least carbon mineralization.</p>
+<p>Increasing sand content had negative impact on all the soil properties. This might be because the sand are inert particles and in general they do not participate in aggregate formation which might be the reason of this inverse relation.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>This study suggest that the effect of land use is more than the inherent effect of topography and soil texture. Also, conservation land management such as grasslands and woodlands promotes the soil structure and aggregation. Agricuture being the most exhaustive system integration of conservation practices might also beneficial aggregation.</p>
+</section>
+<section id="references" class="level2 unnumbered">
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-abdelrhman2025" class="csl-entry" role="listitem">
+Abdelrhman, Ahmed Ali, Yasser A. Sayed, Mohamed E. Fadl, Cristiano Casucci, Marios Drosos, Antonio Scopa, and Hussein Moftah. 2025. <span>“Impact of Aggregate-Associated Carbon on Soil Mechanical Properties: Stability and Compaction Indices in Pomegranate Orchards of Different Ages.”</span> <em>Soil Systems</em> 9 (1): 20. <a href="https://doi.org/10.3390/soilsystems9010020">https://doi.org/10.3390/soilsystems9010020</a>.
+</div>
+<div id="ref-beare1994" class="csl-entry" role="listitem">
+Beare, M. H., P. F. Hendrix, and D. C. Coleman. 1994. <span>“Water<span>-</span>Stable Aggregates and Organic Matter Fractions in Conventional<span>-</span> and No<span>-</span>Tillage Soils.”</span> <em>Soil Science Society of America Journal</em> 58 (3): 777–86. <a href="https://doi.org/10.2136/sssaj1994.03615995005800030020x">https://doi.org/10.2136/sssaj1994.03615995005800030020x</a>.
+</div>
+<div id="ref-cerdà1998" class="csl-entry" role="listitem">
+Cerdà, A. 1998. <span>“Soil Aggregate Stability Under Different Mediterranean Vegetation Types.”</span> <em>CATENA</em> 32 (2): 73–86. <a href="https://doi.org/10.1016/S0341-8162(98)00041-1">https://doi.org/10.1016/S0341-8162(98)00041-1</a>.
+</div>
+<div id="ref-chen2019" class="csl-entry" role="listitem">
+Chen, Songchao, Dominique Arrouays, Denis A. Angers, Manuel P. Martin, and Christian Walter. 2019. <span>“Soil Carbon Stocks Under Different Land Uses and the Applicability of the Soil Carbon Saturation Concept.”</span> <em>Soil and Tillage Research</em> 188 (May): 53–58. <a href="https://doi.org/10.1016/j.still.2018.11.001">https://doi.org/10.1016/j.still.2018.11.001</a>.
+</div>
+<div id="ref-delelegn2017" class="csl-entry" role="listitem">
+Delelegn, Yoseph T., Witoon Purahong, Amila Blazevic, Birru Yitaferu, Tesfaye Wubet, Hans Göransson, and Douglas L. Godbold. 2017. <span>“Changes in Land Use Alter Soil Quality and Aggregate Stability in the Highlands of Northern Ethiopia.”</span> <em>Scientific Reports</em> 7 (1): 13602. <a href="https://doi.org/10.1038/s41598-017-14128-y">https://doi.org/10.1038/s41598-017-14128-y</a>.
+</div>
+<div id="ref-ding2021" class="csl-entry" role="listitem">
+Ding, S. J., X. F. Zhang, W. L. Yang, X. L. Xin, A. N. Zhu, and S. M. Huang. 2021a. <span>“Soil Nutrients and Aggregate Composition of Four Soils with Contrasting Textures in a Long-Term Experiment.”</span> <em>Eurasian Soil Science</em> 54 (11): 1746–55. <a href="https://doi.org/10.1134/S1064229321110041">https://doi.org/10.1134/S1064229321110041</a>.
+</div>
+<div id="ref-ding2021a" class="csl-entry" role="listitem">
+———. 2021b. <span>“Soil Nutrients and Aggregate Composition of Four Soils with Contrasting Textures in a Long-Term Experiment.”</span> <em>Eurasian Soil Science</em> 54 (11): 1746–55. <a href="https://doi.org/10.1134/S1064229321110041">https://doi.org/10.1134/S1064229321110041</a>.
+</div>
+<div id="ref-elliott1986" class="csl-entry" role="listitem">
+Elliott, E. T. 1986. <span>“Aggregate Structure and Carbon, Nitrogen, and Phosphorus in Native and Cultivated Soils.”</span> <em>Soil Science Society of America Journal</em> 50 (3): 627–33. <a href="https://doi.org/10.2136/sssaj1986.03615995005000030017x">https://doi.org/10.2136/sssaj1986.03615995005000030017x</a>.
+</div>
+<div id="ref-franzluebbers1997" class="csl-entry" role="listitem">
+Franzluebbers, A. J., and M. A. Arshad. 1997. <span>“Soil Microbial Biomass and Mineralizable Carbon of Water<span>-</span>Stable Aggregates.”</span> <em>Soil Science Society of America Journal</em> 61 (4): 1090–97. <a href="https://doi.org/10.2136/sssaj1997.03615995006100040015x">https://doi.org/10.2136/sssaj1997.03615995006100040015x</a>.
+</div>
+<div id="ref-franzluebbers2022" class="csl-entry" role="listitem">
+Franzluebbers, Alan J. 2022a. <span>“Soil<span>-</span>Test Biological Activity Associates with Soil Aggregation Characteristics Under Different Land Uses in North Carolina.”</span> <em>Soil Science Society of America Journal</em> 86 (6): 1639–51. <a href="https://doi.org/10.1002/saj2.20474">https://doi.org/10.1002/saj2.20474</a>.
+</div>
+<div id="ref-franzluebbers2022a" class="csl-entry" role="listitem">
+———. 2022b. <span>“Soil<span>-</span>Test Biological Activity Associates with Soil Aggregation Characteristics Under Different Land Uses in North Carolina.”</span> <em>Soil Science Society of America Journal</em> 86 (6): 1639–51. <a href="https://doi.org/10.1002/saj2.20474">https://doi.org/10.1002/saj2.20474</a>.
+</div>
+<div id="ref-garland2024" class="csl-entry" role="listitem">
+Garland, Gina, John Koestel, Alice Johannes, Olivier Heller, Sebastian Doetterl, Dani Or, and Thomas Keller. 2024. <span>“Perspectives on the Misconception of Levitating Soil Aggregates.”</span> <em>SOIL</em> 10 (1): 23–31. <a href="https://doi.org/10.5194/soil-10-23-2024">https://doi.org/10.5194/soil-10-23-2024</a>.
+</div>
+<div id="ref-helgason2010" class="csl-entry" role="listitem">
+Helgason, B. L., F. L. Walley, and J. J. Germida. 2010. <span>“No-till Soil Management Increases Microbial Biomass and Alters Community Profiles in Soil Aggregates.”</span> <em>Applied Soil Ecology</em> 46 (3): 390–97. <a href="https://doi.org/10.1016/j.apsoil.2010.10.002">https://doi.org/10.1016/j.apsoil.2010.10.002</a>.
+</div>
+<div id="ref-jobbágy2000" class="csl-entry" role="listitem">
+Jobbágy, Esteban G., and Robert B. Jackson. 2000. <span>“THE VERTICAL DISTRIBUTION OF SOIL ORGANIC CARBON AND ITS RELATION TO CLIMATE AND VEGETATION.”</span> <em>Ecological Applications</em> 10 (2): 423–36. <a href="https://doi.org/10.1890/1051-0761(2000)010[0423:TVDOSO]2.0.CO;2">https://doi.org/10.1890/1051-0761(2000)010[0423:TVDOSO]2.0.CO;2</a>.
+</div>
+<div id="ref-kan2020" class="csl-entry" role="listitem">
+Kan, Zheng-Rong, Shou-Tian Ma, Qiu-Yue Liu, Bing-Yang Liu, Ahmad Latif Virk, Jian-Ying Qi, Xin Zhao, Rattan Lal, and Hai-Lin Zhang. 2020. <span>“Carbon Sequestration and Mineralization in Soil Aggregates Under Long-Term Conservation Tillage in the North China Plain.”</span> <em>CATENA</em> 188 (May): 104428. <a href="https://doi.org/10.1016/j.catena.2019.104428">https://doi.org/10.1016/j.catena.2019.104428</a>.
+</div>
+<div id="ref-jastrow2005" class="csl-entry" role="listitem">
+Lal, Rattan. 2005. <span>“Organic Matter Turnover.”</span> In. CRC Press. <a href="https://doi.org/10.1201/NOE0849338304.ch252">https://doi.org/10.1201/NOE0849338304.ch252</a>.
+</div>
+<div id="ref-rcoreteam2024" class="csl-entry" role="listitem">
+R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-rillig2017" class="csl-entry" role="listitem">
+Rillig, Matthias C, Ludo A H Muller, and Anika Lehmann. 2017. <span>“Soil Aggregates as Massively Concurrent Evolutionary Incubators.”</span> <em>The ISME Journal</em> 11 (9): 1943–48. <a href="https://doi.org/10.1038/ismej.2017.56">https://doi.org/10.1038/ismej.2017.56</a>.
+</div>
+<div id="ref-six2000" class="csl-entry" role="listitem">
+Six, J, E. T Elliott, and K Paustian. 2000. <span>“Soil Macroaggregate Turnover and Microaggregate Formation: A Mechanism for C Sequestration Under No-Tillage Agriculture.”</span> <em>Soil Biology and Biochemistry</em> 32 (14): 2099–2103. <a href="https://doi.org/10.1016/S0038-0717(00)00179-6">https://doi.org/10.1016/S0038-0717(00)00179-6</a>.
+</div>
+<div id="ref-sullivan2022" class="csl-entry" role="listitem">
+Sullivan, P. L., S. A. Billings, D. Hirmas, L. Li, X. Zhang, S. Ziegler, K. Murenbeeld, et al. 2022. <span>“Embracing the Dynamic Nature of Soil Structure: A Paradigm Illuminating the Role of Life in Critical Zones of the Anthropocene.”</span> <em>Earth-Science Reviews</em> 225 (February): 103873. <a href="https://doi.org/10.1016/j.earscirev.2021.103873">https://doi.org/10.1016/j.earscirev.2021.103873</a>.
+</div>
+<div id="ref-wright1999" class="csl-entry" role="listitem">
+Wright, S. F., J. L. Starr, and I. C. Paltineanu. 1999. <span>“Changes in Aggregate Stability and Concentration of Glomalin During Tillage Management Transition.”</span> <em>Soil Science Society of America Journal</em> 63 (6): 1825–29. <a href="https://doi.org/10.2136/sssaj1999.6361825x">https://doi.org/10.2136/sssaj1999.6361825x</a>.
+</div>
+<div id="ref-wright1998" class="csl-entry" role="listitem">
+Wright, S. F., and A. Upadhyaya. 1998. <span>“A Survey of Soils for Aggregate Stability and Glomalin, a Glycoprotein Produced by Hyphae of Arbuscular Mycorrhizal Fungi.”</span> <em>Plant and Soil</em> 198 (1): 97–107. <a href="https://doi.org/10.1023/A:1004347701584">https://doi.org/10.1023/A:1004347701584</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,70 @@
+---
+title: "SandCorr"
+format: html
+editor: visual
+---
+
+```{r}
+library(readxl)
+library(broom) 
+library(dplyr) 
+library(ggplot2)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(webshot2)
+ library(officer)
+library(flextable)
+library(tidyr)
+
+my_data <- read_excel("/Users/shivalikasingh/Desktop/Manuscript/R data/Input/NCDataFile.xlsx",sheet ="R_data" )
+```
+
+\
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(knitr)
+library(kableExtra)
+library(flextable)
+library(officer)
+
+# variables of interest
+variable <- c("STBAi", "STBAc", "CMINi", "CMINc",
+          "Net_NMIN24_crushed", "Net_NMIN24_intact")
+
+# helper function to run correlation test and return r + p
+corr_fun <- function(x, y) {
+  test <- cor.test(x, y, method = "pearson")
+  r <- round(test$estimate, 2)
+  p <- test$p.value
+  stars <- ifelse(p < 0.001, "***",
+           ifelse(p < 0.01, "**",
+           ifelse(p < 0.05, "*", "")))
+  paste0(r, stars)}
+
+# compute correlations by Land_use
+cor_table <- my_data |>
+  group_by(Land_use) |>
+  summarise(across(all_of(variable ),
+                   ~ corr_fun(Sand, .x),
+                   .names = "{.col}")) |>
+   pivot_longer(-Land_use, names_to = "variable", values_to = "r") |>
+  mutate(
+    variable = recode(
+      variable,
+      "STBAi" = "STBA intact",
+      "STBAc" = "STBA crushed",
+      "CMINi" = "CMIN intact",
+      "CMINc" = "CMIN crushed",
+      "Net_NMIN24_intact" = "Net N mineralization intact",
+      "Net_NMIN24_crushed" = "Net N mineralization crushed"
+      ))|>
+  pivot_wider(names_from = Land_use, values_from = r) |>
+        select(variable = variable,
+    `1CT`, `2NT`, `3GR`, `4WL`)
+ 
+kbl(cor_table, caption = "Table 3:Correlations of variables with sand by landuse") |>
+  kable_classic(full_width = F, html_font = "Cambria")
+```
