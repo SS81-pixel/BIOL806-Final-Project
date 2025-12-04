@@ -4,10 +4,11 @@ format: pdf
 editor: visual
 bibliography: references.bib
 execute-dir: project
+output-dir: output
 author: Shivalika Singh
 ---
 
-Git-link: GitHub Repo: <https://github.com/SS81-pixel/BIOL806-Final-Project>
+GitHub Repository: <https://github.com/SS81-pixel/BIOL806-Final-Project>
 
 ## Abstract
 
@@ -90,7 +91,7 @@ table(my_data$Land_use) # this gives values of observations in each land use
 table(my_data$MLRA)# this gives total observation count in major land physiographic regions
 colSums(is.na(my_data))# this tell me missing values in each column
 
-
+getwd()
 ```
 
 Where Y was response variable for different soil properties measure. Land use included four levels of each land management practice and sand content was continous variable that varied across land uses.
