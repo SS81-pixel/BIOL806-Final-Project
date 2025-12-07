@@ -3,8 +3,7 @@ title: "Final Project BIOL 806"
 format: pdf
 editor: visual
 bibliography: references.bib
-execute-dir: project
-output-dir: output
+output-dir: ../output
 author: Shivalika Singh
 ---
 
